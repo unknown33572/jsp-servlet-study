@@ -1,4 +1,4 @@
-function check() {
+function check() { // 회원가입시 입력값이 비어있는지 확인하는 함수
   if(document.frm.name.value == "") {
     alert("이름을 입력하세요.");
     document.frm.name.focus();

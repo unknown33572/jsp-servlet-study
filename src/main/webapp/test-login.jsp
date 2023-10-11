@@ -12,7 +12,7 @@
   <title>Test-Login</title>
 </head>
 <body>
-  <%
+  <% // 로그인 처리
     String id = "s";
     String pw = "1234";
     String name = "홍길동";

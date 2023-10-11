@@ -5,7 +5,7 @@
   <title>Login</title>
 </head>
 <body>
-  <form method="get" action="Login">
+  <form method="get" action="Login"> <%-- GET 방식으로 Login.java 서블릿으로 전송 --%>
     <label for="userid"> 아이디: </label>
     <input type="text" name="id" id="userid" />
     <br />

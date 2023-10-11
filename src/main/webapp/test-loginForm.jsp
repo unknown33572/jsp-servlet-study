@@ -10,7 +10,7 @@
 <head>
   <title>Test-LoginForm</title>
 </head>
-<body>
+<body> <%-- 로그인 폼 --%>
   <form method="post" action="test-login.jsp">
     <label for="userid"> 아이디 : </label>
     <input type="text" name="id" id="userid" />

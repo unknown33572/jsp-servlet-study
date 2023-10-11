@@ -10,7 +10,7 @@
 <head>
   <title>Test-Main</title>
 </head>
-<body>
+<body> <%-- Parameter로 넘어온 name을 출력함. --%>
   <%= request.getParameter("name")%>님 안녕하세요!
 </body>
 </html>

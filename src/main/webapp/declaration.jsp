@@ -11,7 +11,7 @@
   <title>JSP 간단 사용방법</title>
 </head>
 <body>
-  <%!
+  <%! // 선언부
     String hi = "안녕하세요.";
     String name= "홍길동";
     int x = 10;
@@ -21,7 +21,7 @@
       return x + y;
     }
   %>
-  <%
+  <% // 실행부
     out.print(hi + "<br>" + name + "입니다.<br>");
     out.print("x : " + x + "<br>");
     out.print("y : " + y + "<br>");
