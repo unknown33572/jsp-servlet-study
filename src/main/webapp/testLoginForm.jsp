@@ -11,7 +11,7 @@
   <title>Test-LoginForm</title>
 </head>
 <body> <%-- 로그인 폼 --%>
-  <form method="post" action="test-login.jsp">
+  <form method="post" action="testLogin.jsp">
     <label for="userid"> 아이디 : </label>
     <input type="text" name="id" id="userid" />
     <br />

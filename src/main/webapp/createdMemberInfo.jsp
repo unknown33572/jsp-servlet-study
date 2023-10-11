@@ -47,8 +47,6 @@
       <td>전화번호</td>
       <td><jsp:getProperty name="member" property="phone"/></td>
     </tr>
-
-
   </table>
 </body>
 </html>

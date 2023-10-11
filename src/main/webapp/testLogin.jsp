@@ -18,9 +18,9 @@
     String name = "홍길동";
     request.setCharacterEncoding("UTF-8");
     if(id.equals(request.getParameter("id")) && pw.equals(request.getParameter("pw"))){
-      response.sendRedirect("test-main.jsp?name="+ URLEncoder.encode(name,"UTF-8"));
+      response.sendRedirect("testMain.jsp?name="+ URLEncoder.encode(name,"UTF-8"));
     } else {
-      response.sendRedirect("test-loginForm.jsp");
+      response.sendRedirect("testLoginForm.jsp");
     }
   %>
 </body>

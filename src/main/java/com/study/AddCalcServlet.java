@@ -1,7 +1,5 @@
 package com.study;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/AddCalc")
-public class AddCalc extends HttpServlet {
+@WebServlet("/AddCalcServlet")
+public class AddCalcServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     int numX = 20;
@@ -22,7 +20,7 @@ public class AddCalc extends HttpServlet {
     req.setAttribute("numY", numY);
     req.setAttribute("sum", sum);
 
-    RequestDispatcher dispatcher = req.getRequestDispatcher("/add-calc.jsp");
+    RequestDispatcher dispatcher = req.getRequestDispatcher("/addCalc.jsp");
     dispatcher.forward(req, resp);
   }
 }

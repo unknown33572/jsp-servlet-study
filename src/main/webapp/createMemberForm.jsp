@@ -12,7 +12,7 @@
 </head>
 <body>
   <h2>회원가입 입력 폼</h2>
-  <form method="post" action="created-member-info.jsp">
+  <form method="post" action="createdMemberInfo.jsp">
     <table>
       <tr>
         <td>아이디</td>

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/bye-servlet")
+@WebServlet("/ByeServlet")
 public class ByeServlet extends HttpServlet {
 
   @Override
