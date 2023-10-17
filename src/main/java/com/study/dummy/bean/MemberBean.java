@@ -1,4 +1,4 @@
-package com.study.bean;
+package com.study.dummy.bean;
 
 public class MemberBean {
   private String id;

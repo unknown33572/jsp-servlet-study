@@ -6,12 +6,26 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <!-- Servlet -->
+
+  <!--
   <servlet>
     <servlet-name>hello-servlet</servlet-name>
-    <servlet-class>com.study.HelloServlet</servlet-class>
+    <servlet-class>com.study.dummy.HelloServlet</servlet-class>
   </servlet>
+
   <servlet-mapping>
     <servlet-name>hello-servlet</servlet-name>
     <url-pattern>/hello-servlet</url-pattern>
+  </servlet-mapping>
+  -->
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.study.controller.LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
   </servlet-mapping>
 </web-app>

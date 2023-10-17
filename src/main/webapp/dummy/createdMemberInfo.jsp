@@ -10,7 +10,7 @@
   <%
     request.setCharacterEncoding("UTF-8");
   %>
-  <jsp:useBean id="member" class="com.study.bean.MemberBean" />
+  <jsp:useBean id="member" class="com.study.dummy.bean.MemberBean" />
   <jsp:setProperty name="member" property="*" />
 <head>
   <title>회원 정보 폼</title>

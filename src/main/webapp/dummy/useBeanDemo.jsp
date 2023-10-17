@@ -11,7 +11,7 @@
   <title>Java Bean Create</title>
 </head>
 <body>
-  <jsp:useBean id="member" class="com.study.bean.MemberBean"/>
+  <jsp:useBean id="member" class="com.study.dummy.bean.MemberBean"/>
 
   이름: <%= member.getName() %><br/>
   나이: <%= member.getAge() %><br/>

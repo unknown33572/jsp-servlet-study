@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Title</title>
-  <script type="text/javascript" src="./meddleware/paramCheck.js"></script>
+  <script type="text/javascript" src="../../meddleware/paramCheck.js"></script>
 </head>
 <body>
   <form name="frm" method="get" action="ParamServlet" onsubmit="return check()">

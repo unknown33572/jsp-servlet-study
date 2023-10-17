@@ -12,7 +12,7 @@
 </head>
 <body>
   <h2>회원 가입폼</h2>
-  <form method="post" action="./addMember.jsp">
+  <form method="post" action="addMember.jsp">
     <table border="1">
       <tr>
         <td>이름</td>
