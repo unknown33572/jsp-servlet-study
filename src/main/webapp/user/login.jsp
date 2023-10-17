@@ -27,7 +27,7 @@
         <td colspan="2" align="center">
           <input type="submit" value="Login" onclick="loginCheck()">
           <input type="reset" value="Cancel">
-          <input type="button" value="Join" onclick="location.href="join.do">
+          <input type="button" value="Join" onclick="location.href='join.do'">
         </td>
       </tr>
       <tr><td colspan="2">${message}</td></tr>
