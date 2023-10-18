@@ -31,6 +31,7 @@
         </td>
       </tr>
       <tr><td colspan="2">${message}</td></tr>
+      <tr><td colspan="2">${loginUser}</td></tr>
     </table>
   </form>
 </body>

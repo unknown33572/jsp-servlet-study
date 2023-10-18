@@ -1,7 +1,7 @@
 package com.study.dto;
 
 public class UserVO {
-  private String userid;
+  private String uid;
   private String pwd;
   private String uname;
   private String email;
@@ -9,18 +9,18 @@ public class UserVO {
   private String gender;
 
   public String getUid() {
-    return userid;
+    return uid;
   }
 
   public void setUid(String uid) {
-    this.userid = userid;
+    this.uid = uid;
   }
 
   public String getUpw() {
     return pwd;
   }
 
-  public void setUpw(String upw) {
+  public void setUpw(String pwd) {
     this.pwd = pwd;
   }
 
@@ -59,7 +59,7 @@ public class UserVO {
   @Override
   public String toString() {
     return "UserVO{" +
-        "uid='" + userid + '\'' +
+        "uid='" + uid + '\'' +
         ", upw='" + pwd + '\'' +
         ", uname='" + uname + '\'' +
         ", email='" + email + '\'' +

@@ -78,8 +78,8 @@ public class UserDAO {
       rs = pstmt.executeQuery();
       if(rs.next()) {
         uVo = new UserVO();
-        uVo.setUid(rs.getString("uid"));
-        uVo.setUpw(rs.getString("upw"));
+        uVo.setUid(rs.getString("userid"));
+        uVo.setUpw(rs.getString("pwd"));
         uVo.setUname(rs.getString("uname"));
         uVo.setEmail(rs.getString("email"));
         uVo.setPhone(rs.getString("phone"));
