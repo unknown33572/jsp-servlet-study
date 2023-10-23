@@ -80,7 +80,7 @@ public class UserDAO {
         uVo = new UserVO();
         uVo.setUid(rs.getString("userid"));
         uVo.setUpw(rs.getString("pwd"));
-        uVo.setUname(rs.getString("uname"));
+        uVo.setUname(rs.getString("name"));
         uVo.setEmail(rs.getString("email"));
         uVo.setPhone(rs.getString("phone"));
         uVo.setGender(rs.getString("gender"));
@@ -97,5 +97,63 @@ public class UserDAO {
       }
     }
     return uVo;
+  }
+
+  public int comfirmID(String userid) {
+    int result = 0;
+    String sql = "select userid from users where userid = ?";
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+    try {
+      conn = getConnection();
+      pstmt = conn.prepareStatement(sql);
+      pstmt.setString(1, userid);
+      rs = pstmt.executeQuery();
+      if(rs.next()) {
+        result = 1;
+      } else {
+        result = -1;
+      }
+    } catch(Exception e) {
+      e.printStackTrace();
+    } finally {
+      try {
+        if(rs != null) rs.close();
+        if(pstmt != null) pstmt.close();
+        if(conn != null) conn.close();
+      } catch(Exception e) {
+        e.printStackTrace();
+      }
+    }
+    return result;
+  }
+
+  public int insertUser(UserVO uVo) {
+    int result = -1;
+    String sql = "insert into users (userid, pwd, name, email, phone, gender) values(?, ?, ?, ?, ?, ?)";
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    try {
+      conn = getConnection();
+      pstmt = conn.prepareStatement(sql);
+      pstmt.setString(1, uVo.getUid());
+      pstmt.setString(2, uVo.getUpw());
+      pstmt.setString(3, uVo.getUname());
+      pstmt.setString(4, uVo.getEmail());
+      pstmt.setString(5, uVo.getPhone());
+      pstmt.setString(6, uVo.getGender());
+      result = pstmt.executeUpdate();
+    } catch(Exception e) {
+      e.printStackTrace();
+    } finally {
+      try {
+        if(pstmt != null) pstmt.close();
+        if(conn != null) conn.close();
+      } catch(Exception e) {
+        e.printStackTrace();
+      }
+    }
+    return result;
   }
 }

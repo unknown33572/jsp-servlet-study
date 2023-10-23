@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//    String url = "user/login.jsp";
+    String url = "user/login.jsp";
 
     String uid = req.getParameter("uid");
     String upw = req.getParameter("upw");
@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
     UserDAO uDao = UserDAO.getInstance(); // singleton pattern
     int result = uDao.userCheck(uid, upw); // 1: 일치, 0: 실패, -1: 불일치
 
-    String url = "main.jsp";
+    url = "main.jsp";
     if(result == 1) {
       UserVO uVo = uDao.getUser(uid);
       HttpSession session = req.getSession();

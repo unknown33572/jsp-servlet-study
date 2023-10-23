@@ -1,15 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: s
-  Date: 10/16/23
-  Time: 19:42
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
   <title>Title</title>
-  <script type="text/javascript" src="../script/user.js"></script>
 </head>
 <body>
   <h2>Login</h2>
@@ -17,11 +9,11 @@
     <table>
       <tr>
         <td>ID</td>
-        <td><input type="text" name="uid" value="${uid}"></td>
+        <td><input type="text" id="uid" name="uid" value="${uid}"></td>
       </tr>
       <tr>
         <td>PW</td>
-        <td><input type="password" name="upw" value="${upw}"></td>
+        <td><input type="password" id="upw" name="upw" value="${upw}"></td>
       </tr>
       <tr>
         <td colspan="2" align="center">
@@ -31,8 +23,9 @@
         </td>
       </tr>
       <tr><td colspan="2">${message}</td></tr>
-      <tr><td colspan="2">${loginUser}</td></tr>
+<%--      <tr><td colspan="2">${loginUser}</td></tr>--%>
     </table>
   </form>
+  <script type="text/javascript" src="../script/user.js"></script>
 </body>
 </html>
