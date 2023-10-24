@@ -15,7 +15,23 @@
         <td>이름</td>
         <td><input type="text" name="name" size="20" value="${uVo.uname}" readonly></td>
       </tr>
-
+      <tr>
+        <td>email</td>
+        <td><input type="text" name="email" size="20" value="${uVo.email}"></td>
+      </tr>
+      <tr>
+        <td>전화번호</td>
+        <td><input type="text" name="phone" size="20" value="${uVo.phone}"></td>
+      </tr>
+      <tr>
+        <td><input type="hidden" name="uid" value="${uVo.uid}"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="수정">
+          <input type="reset" value="취소">
+        </td>
+      </tr>
     </table>
   </form>
 </body>

@@ -31,5 +31,21 @@ public class UserUpdateServlet extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    req.setCharacterEncoding("UTF-8");
+
+    String email = req.getParameter("email");
+    String phone = req.getParameter("phone");
+    String uid = req.getParameter("uid");
+
+    UserVO uVo = new UserVO();
+    uVo.setEmail(email);
+    uVo.setPhone(phone);
+    uVo.setUid(uid);
+
+    UserDAO uDao = UserDAO.getInstance();
+
+    uDao.updateUser(uVo);
+
+    resp.sendRedirect("login.do");
   }
 }

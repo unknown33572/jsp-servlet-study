@@ -156,4 +156,29 @@ public class UserDAO {
     }
     return result;
   }
+
+  public int updateUser(UserVO uVo) {
+    int result = -1;
+    String sql = "update users set email=?," + "phone=? where userid=?";
+    Connection conn = null;
+    PreparedStatement pstmt = null;
+    try {
+      conn = getConnection();
+      pstmt = conn.prepareStatement(sql);
+      pstmt.setString(1, uVo.getEmail());
+      pstmt.setString(2, uVo.getPhone());
+      pstmt.setString(3, uVo.getUid());
+      result = pstmt.executeUpdate();
+    } catch(Exception e) {
+      e.printStackTrace();
+    } finally {
+      try {
+        if(pstmt != null) pstmt.close();
+        if(conn != null) conn.close();
+      } catch(Exception e) {
+        e.printStackTrace();
+      }
+    }
+    return result;
+  }
 }
