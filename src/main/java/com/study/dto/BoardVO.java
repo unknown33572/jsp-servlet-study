@@ -1,5 +1,9 @@
 package com.study.dto;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class BoardVO {
   private int num;
   private String name;
@@ -70,7 +74,7 @@ public class BoardVO {
     return writedate;
   }
 
-  public void setWritedate(String writedate) {
-    this.writedate = writedate;
+  public void setWritedate(Timestamp writedate) {
+    this.writedate = new SimpleDateFormat("yyyy-MM-dd").format(writedate);
   }
 }

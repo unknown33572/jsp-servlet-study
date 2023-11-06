@@ -17,6 +17,10 @@
         <td>
           안녕하세요. <c:out value="${loginUser.uname}"/>님 환영합니다!
         </td>
+
+        <td>
+          게시글 페이지 이동 <a href="BoardServlet?command=board_list">이동</a>
+        </td>
       </tr>
       <tr>
         <td colspan="2" align="center">

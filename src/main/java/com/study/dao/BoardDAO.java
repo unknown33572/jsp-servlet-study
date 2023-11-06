@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BoardDAO {
-  private BoardDAO {
+  private BoardDAO() {
 
   }
 
-  private static BoardDAO instance = new BoardDAO();
+  private static final BoardDAO instance = new BoardDAO();
 
   public static BoardDAO getInstance() {
     return instance;
@@ -43,7 +43,7 @@ public class BoardDAO {
         bVo.setTitle(rs.getString("title"));
         bVo.setContent(rs.getString("content"));
         bVo.setViewcount(rs.getInt("viewcount"));
-        bVo.setWritedate(rs.getString("writedate"));
+        bVo.setWritedate(rs.getTimestamp("writedate"));
         list.add(bVo); // list에 BoardVO 객체 추가
       }
     } catch(Exception e) {
@@ -55,9 +55,7 @@ public class BoardDAO {
   }
 
   public void insertBoard(BoardVO bVo) {
-    String sql = "insert into board(" +
-                 "num, name, email, pass, title, content) " +
-                 "values(board_seq.nextval, ?,?,?,?,?)";
+    String sql = "insert into board(name, pass, title, content) values(?, ?, ?, ?)";
 
     Connection conn = null;
     PreparedStatement pstmt = null;
@@ -67,10 +65,9 @@ public class BoardDAO {
       pstmt = conn.prepareStatement(sql);
 
       pstmt.setString(1, bVo.getName());
-      pstmt.setString(2, bVo.getEmail());
-      pstmt.setString(3, bVo.getPass());
-      pstmt.setString(4, bVo.getTitle());
-      pstmt.setString(5, bVo.getContent());
+      pstmt.setString(2, bVo.getPass());
+      pstmt.setString(3, bVo.getTitle());
+      pstmt.setString(4, bVo.getContent());
 
       pstmt.executeUpdate();
     } catch(Exception e) {
@@ -122,7 +119,7 @@ public class BoardDAO {
         bVo.setTitle(rs.getString("title"));
         bVo.setContent(rs.getString("content"));
         bVo.setViewcount(rs.getInt("viewcount"));
-        bVo.setWritedate(rs.getString("writedate"));
+        bVo.setWritedate(rs.getTimestamp("writedate"));
       }
     } catch(Exception e) {
       e.printStackTrace();
@@ -183,7 +180,7 @@ public class BoardDAO {
         bVo.setTitle(rs.getString("title"));
         bVo.setContent(rs.getString("content"));
         bVo.setViewcount(rs.getInt("viewcount"));
-        bVo.setWritedate(rs.getString("writedate"));
+        bVo.setWritedate(rs.getTimestamp("writedate"));
       }
     } catch(Exception e) {
       e.printStackTrace();
