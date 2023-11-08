@@ -191,7 +191,7 @@ public class BoardDAO {
   }
 
   public void deleteBoard(String num) {
-    String sql = "delete board where num = ?";
+    String sql = "delete from board where num = ?";
 
     Connection conn = null;
     PreparedStatement pstmt = null;

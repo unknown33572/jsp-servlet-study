@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: s
-  Date: 10/25/23
-  Time: 21:58
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
   <title>Title</title>
@@ -16,7 +9,7 @@
   <div align="center">
     <h1>비밀번호 확인</h1>
     <form action="BoardServlet" name="frm" method="get">
-      <input type="hidden" name="command" value="board_check_pass"> //command에 board_check_pass를 넣어서 보냄
+      <input type="hidden" name="command" value="board_check_pass"> 비밀번호를 입력해주세요.<%-- command에 board_check_pass를 넣어서 보냄 --%>
       <input type="hidden" name="num" value="${param.num}">
       <table style="width: 80%">
         <tr>

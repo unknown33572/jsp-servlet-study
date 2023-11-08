@@ -21,11 +21,22 @@ public class BoardCheckPassAction implements Action {
     BoardDAO bDao = BoardDAO.getInstance();
     BoardVO bVo = bDao.selectOneBoardByNum(num); // 게시글 번호로 게시글 정보를 가져옴
 
-    if(bVo.getPass().equals(pass)) {
+    String getPass = bVo.getPass();
+    System.out.println(" 실행됨 게시글 비밀번호 확인 : " + getPass);
+
+    System.out.println("request num : " + num);
+    System.out.println("request pass : " + pass);
+
+    if (bVo != null && bVo.getPass().equals(pass)) {
       url = "board/checkSuccess.jsp";
+      System.out.println("비밀번호 일치" + bVo.getPass() + " " + pass);
     } else {
       url = "board/boardCheckPass.jsp";
-      req.setAttribute("message", "비밀번호가 틀렸습니다.");
+      if (bVo == null) {
+        req.setAttribute("message", "해당 게시글을 찾을 수 없습니다.");
+      } else {
+        req.setAttribute("message", "비밀번호가 틀렸습니다.");
+      }
     }
 
     RequestDispatcher dispatcher = req.getRequestDispatcher(url);

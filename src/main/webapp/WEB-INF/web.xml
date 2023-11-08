@@ -7,6 +7,16 @@
 
   <!-- Servlet -->
 
+  <servlet>
+    <servlet-name>BoardServlet</servlet-name>
+    <servlet-class>com.study.controller.BoardServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>BoardServlet</servlet-name>
+    <url-pattern>/BoardServlet</url-pattern>
+  </servlet-mapping>
+
   <!--
   <servlet>
     <servlet-name>hello-servlet</servlet-name>

@@ -1,5 +1,6 @@
 package com.study.controller.action;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +11,7 @@ public class BoardCheckPassFormAction  implements Action {
   public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     String url = "board/boardCheckPass.jsp";
 
-    req.getRequestDispatcher(url).forward(req, resp);
+    RequestDispatcher dispatcher = req.getRequestDispatcher(url);
+    dispatcher.forward(req, resp);
   }
 }
