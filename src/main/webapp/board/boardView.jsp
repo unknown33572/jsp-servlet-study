@@ -22,6 +22,8 @@
     </table>
     <br>
     <input type="button" value="목록" onclick="location.href='BoardServlet?command=board_list'">
+    <input type="button" value="수정" onclick="open_win('BoardServlet?command=boaed_check_pass_form&num=${board.num}', 'update')">
+    <input type="button" value="삭제" onclick="open_win('BoardServlet?command=boaed_check_pass_form&num=${board.num}', 'delete')">
   </div>
 </body>
 </html>
